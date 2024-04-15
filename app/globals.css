@@ -2,32 +2,148 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.nav-active {
+  border-right: 2px solid #105a7e;
+  width: 175px;
+  display: block;
+  color: #105a7e;
+  height: 25px;
+  font-size: 17px;
+  font-weight: 600;
+  /* Sky Blue color */
+}
+.gobeze-primary {
+  color: #ff7f00;
+}
+.gobeze-bg {
+  background-color: #ff7f00;
+}
+.gobeze-secondary {
+  color: #0a122d;
+}
+.gobeze-footer-bg {
+  background-color: #063a53;
+}
+.gobeze-secondary-light {
+  color: rgb(123, 128, 154);
+}
+.gobeze-primary-bg {
+  background-color: #ff7f00;
+}
+.gobeze-secondary-bg {
+  background-color: #105a7e;
+}
+.gobeze-secondary-button {
+  background-color: #a6a6a6;
+}
+.gobeze-secondary-button:hover {
+  background-color: #105a7e;
+}
+/* .gobeze-primary-bg:hover{
+  background-color: #105a7E;
+} */
+.gobeze-primary-button {
+  background-color: #105a7e;
+}
+.gobeze-primary-button:hover {
+  background-color: #ff7f00;
+}
+.font-Montserrat {
+  font-family: Montserrat;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: black;
+}
+.font-Dax {
+  font-family: Dax, sans-serif;
+  /* color: black; */
+}
+.text-primary {
+  color: #ff7f00;
+}
+.text-secondary {
+  color: #105a7e;
+}
+.border-primary {
+  border-color: #ff7f00;
+}
+.border-secondary {
+  border-color: #105a7e;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
   }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.slider-hover:hover {
+  animation-play-state: paused;
+}
+.text-vertical {
+  writing-mode: vertical-lr;
+  /* Vertical writing mode, right-to-left */
+  text-orientation: upright;
+  /* Allow upright text */
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+}
+.bg-custom-size {
+  background-size: 100%;
+  background-position: left -40px top -70px;
+  /* Adjust the percentage based on your preference */
+  background-image: url('/classesBg.png');
+  background-repeat: no-repeat;
+}
+.sublink-grid {
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+} /* ImageSlider.css */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+.pulse-effect {
+  animation: pulse 2s infinite;
+}
+.popular-courses-bg {
+  background-size: 100%;
+  background-image: url('/Courses_section.png');
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 600px) {
+  .popular-courses-bg {
+    background-image: none;
+    /* Remove background image for small screens */
+  }
+}
+@font-face {
+  font-family: 'Dax';
+  src: url('/fonts/DaxRegular.ttf') format('truetype');
+  /* Add additional formats if necessary */
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  font-family: 'Dax', sans-serif;
 }

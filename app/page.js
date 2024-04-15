@@ -1,10 +1,22 @@
 import Image from 'next/image';
 // import home from "@/components/home"
 import Hero from '@/components/home';
+import Navbar from '@/components/navbar';
+import SocialLinks from '@/components/socialLink';
+import RunningClasses from '@/components/classes';
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-      <Hero />
-    </main>
+    <div className=''>
+      <Navbar />
+      <div className='justify-center flex'>
+        <Hero />
+      </div>
+      <div>
+        <SocialLinks />
+      </div>
+      <div>
+        <RunningClasses />
+      </div>
+    </div>
   );
 }
