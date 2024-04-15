@@ -4,6 +4,7 @@ import Hero from '@/components/home';
 import Navbar from '@/components/navbar';
 import SocialLinks from '@/components/socialLink';
 import RunningClasses from '@/components/classes';
+import Form from '@/components/form';
 export default function Home() {
   return (
     <div className=''>
@@ -16,6 +17,9 @@ export default function Home() {
       </div>
       <div>
         <RunningClasses />
+      </div>
+      <div>
+        <Form/>
       </div>
     </div>
   );
