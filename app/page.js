@@ -5,21 +5,32 @@ import Navbar from '@/components/navbar';
 import SocialLinks from '@/components/socialLink';
 import RunningClasses from '@/components/classes';
 import Form from '@/components/form';
+import Footer from '@/components/footer';
+import Services from '@/components/services';
 export default function Home() {
   return (
     <div className=''>
-      <Navbar />
+      <div className='justify-center flex'>
+        <Navbar />
+      </div>
+
       <div className='justify-center flex'>
         <Hero />
       </div>
-      <div>
+      <div className='justify-center flex '>
         <SocialLinks />
       </div>
-      <div>
+      <div className='px-4 mt-20'>
+        <Services />
+      </div>
+      <div className='justify-center flex '>
         <RunningClasses />
       </div>
-      <div>
-        <Form/>
+      <div className=' mt-20'>
+        <Form />
+      </div>
+      <div className='mt-20'>
+        <Footer />
       </div>
     </div>
   );

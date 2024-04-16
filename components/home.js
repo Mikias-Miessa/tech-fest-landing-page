@@ -12,7 +12,7 @@ const texts = [
 ];
 const Hero = () => {
   return (
-    <div className='xl:h-fit md:h-[720px] w-[1920px] overflow-hidden '>
+    <div className='xl:h-fit md:h-[720px] w-[1920px] overflow-hidden'>
       <div className=' flex flex-col-reverse md:flex-row  bg-white font-Dax bg-cover md:gap-10 lg:gap-0  '>
         <div className='flex flex-col md:mt-4 md:pt-48   item-center text-secondary pl-8 md:pl-10 xl:pl-28 lg:pl-20 md:py-28 text-left md:w-1/2 w-full '>
           {/* <p className='font-extrabold lg:text-6xl xl:text-8xl text-5xl px-4 md:px-0'>Know. Now.</p> */}

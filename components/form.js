@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import axiosInstance from '@/libs/axiosInstance';
+import SectionTitle from './sectionTitle';
 
 const baseUrl = '/api/tech';
 
@@ -45,7 +46,13 @@ const Form = () => {
 
   return (
     <form onSubmit={handleSubmit} className='max-w-md mx-auto md:p-0 p-10'>
-       <h2 className='text-xl text-center font-semibold mb-4'>User Information</h2>
+      {/* <h2 className='font-extrabold md:text-6xl text-2xl text-secondary text-center '>
+        Free Courses
+      </h2> */}
+      <SectionTitle title={'Free Courses'} />
+      <h2 className='text-sm md:text-xl text-center font-light md:font-light my-4'>
+        Register here for free online courses
+      </h2>
       <div className='grid md:grid-cols-3 md:gap-6'>
         <div className='relative z-0 w-full mb-5 group'>
           <input
@@ -160,7 +167,7 @@ const Form = () => {
       </div>
       <button
         type='submit'
-        className='text-white bg-orange-600 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center'
+        className='text-white gobeze-primary-bg  focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center'
       >
         Submit
       </button>
