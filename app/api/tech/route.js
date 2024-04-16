@@ -10,12 +10,18 @@ export async function POST(request) {
 
   // Check if the user already exists
   const existingUser = await Tech.findOne({ firstName, lastName, phone });
-  console.log(existingUser)
+  console.log(existingUser);
   if (existingUser) {
-    return NextResponse.json({ message: 'User is already registered' }, { status: 201 });
+    return NextResponse.json(
+      { message: 'User is already registered' },
+      { status: 201 }
+    );
   }
 
   // If the user does not exist, create a new record
   await Tech.create({ firstName, lastName, age, location, phone, email });
-  return NextResponse.json({ message: 'Form Sent Successfully!' }, { status: 201 });
+  return NextResponse.json(
+    { message: 'Registered Successfully!' },
+    { status: 201 }
+  );
 }

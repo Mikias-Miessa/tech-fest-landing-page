@@ -17,18 +17,19 @@ export default function Home() {
       <div className='justify-center flex'>
         <Hero />
       </div>
-      <div className='justify-center flex '>
-        <SocialLinks />
-      </div>
-      <div className='px-4 mt-20'>
+      <div className='px-4 '>
         <Services />
-      </div>
-      <div className='justify-center flex '>
-        <RunningClasses />
       </div>
       <div className=' mt-20'>
         <Form />
       </div>
+      <div className='justify-center flex mt-20 '>
+        <SocialLinks />
+      </div>
+      {/* <div className='justify-center flex '>
+        <RunningClasses />
+      </div> */}
+
       <div className='mt-20'>
         <Footer />
       </div>

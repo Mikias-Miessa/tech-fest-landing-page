@@ -31,7 +31,7 @@ const Hero = () => {
 
           <div className='text-left md:mt-10 mt-2 px-4 md:px-0 mb-10 md:mb-0'>
             <a
-              href='https://www.gobeze.com/trainings'
+              href='https://www.gobeze.com'
               className='gobeze-primary-bg  py-2 lg:px-2 lg:py-3 font-light lg:font-normal text-white text-sm lg:text-base rounded h-12 w-40 hover:gobeze-secondary-bg duration-200 flex justify-center items-center '
             >
               Explore More

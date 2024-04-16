@@ -61,9 +61,11 @@ const Form = () => {
       {/* <h2 className='font-extrabold md:text-6xl text-2xl text-secondary text-center '>
         Free Courses
       </h2> */}
-      <SectionTitle title={'Free Courses'} />
+      <SectionTitle title={'Join Us'} />
       <h2 className='text-sm md:text-xl text-center font-light md:font-light my-4'>
-        Register here for free online courses
+        Embark on a journey of possibilities with Gobeze. Register now to access
+        seminars, job matching, startup acceleration, and courses designed to
+        elevate your potential!
       </h2>
       <div className='grid md:grid-cols-3 md:gap-6'>
         <div className='relative z-0 w-full mb-5 group'>
@@ -182,7 +184,7 @@ const Form = () => {
         type='submit'
         className='text-white gobeze-primary-bg  focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center'
       >
-        {isLoading ? 'Submitting...' : 'Submit'}
+        {isLoading ? 'Registering...' : 'Register'}
       </button>
       {formStatus && (
         <div

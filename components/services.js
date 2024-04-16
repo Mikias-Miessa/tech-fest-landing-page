@@ -5,24 +5,24 @@ import SectionTitle from './sectionTitle';
 
 const faqData = [
   {
-    question: 'Coaching',
+    question: 'Seminar and Workshops',
     answer:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. At saepe eum sapiente nisi eos id excepturi corporis laudantium, ducimus, voluptatem quia quaerat modi? Ex aliquid voluptatibus corporis culpa inventore incidunt.',
-  },
-  {
-    question: 'Mentorship',
-    answer:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptatum alias, iure necessitatibus minima aut? Hic error dicta odit, alias ea excepturi veniam fuga ducimus laborum, officiis, iste suscipit corrupti?',
+      " Dive into our interactive seminars and workshops, custom-made for the vibrant energy of university life. Explore hot topics like leadership hacks, creativity boosters, and career kick-starters in sessions packed with fun activities and real-world insights. Whether you're dreaming up your own startup or aiming to ace that internship, our events are your go-to hub for inspiration, skills, and connections. Get ready to level up your game and unleash your potential!",
   },
   {
     question: 'Job Matching',
     answer:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit labore dignissimos dolorem excepturi perspiciatis, modi vitae exercitationem esse! Optio exercitationem rerum facilis id assumenda, deleniti explicabo ut similique iure accusamus?',
+      "Hunting for that dream job? We've got your back. Our job matching service is like a matchmaking app, but for your career. We use fancy algorithms and deep dives to pair you with opportunities that match your skills, passions, and vibe. Say goodbye to endless job searches and hello to meaningful connections with companies that get you. Whether you're a coding genius, marketing maverick, or anything in between, we'll help you find your perfect match.",
   },
   {
-    question: 'Internship',
+    question: 'Startup Acceleration',
     answer:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, sunt. Labore quisquam, rem sunt nisi corrupti soluta quod autem quia ipsa praesentium hic libero numquam iusto vitae animi impedit consequatur!',
+      "Ready to turn your big ideas into reality? Our startup acceleration program is your launchpad to success. From brainstorming sessions to pitch practice and everything in between, we've got the tools and support to supercharge your startup journey. Connect with fellow trailblazers, tap into expert advice, and get the resources you need to bring your vision to life. Whether you're brewing the next big app or revolutionizing eco-friendly tech, we're here to help you soar. Get ready to disrupt the status quo and make your mark on the world!",
+  },
+  {
+    question: 'Free and Paid Courses',
+    answer:
+      "Dive into a world of learning with our range of free and paid courses designed just for you. Whether you're exploring a new passion or diving deeper into your major, we've got something for everyone. Choose from a variety of topics, from coding and design to entrepreneurship and marketing, and learn at your own pace. Our courses are taught by industry experts, so you know you're getting top-notch education. Plus, with options for both free and paid courses, there's no limit to what you can achieve. So why wait? Start your learning journey today and unlock a world of possibilities!",
   },
   // Add more FAQ items as needed
 ];
