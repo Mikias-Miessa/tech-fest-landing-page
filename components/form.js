@@ -15,7 +15,8 @@ const Form = () => {
     location: '',
   });
   const [formStatus, setFormStatus] = useState(false);
-  const [responseData, setResponseData] = useState('')
+  const [responseData, setResponseData] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,11 +28,12 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     console.log(formData);
     try {
       const response = await axiosInstance.post(baseUrl, formData);
       console.log(response.data);
-      setResponseData(response.data.message)
+      setResponseData(response.data.message);
       setFormData({
         firstName: '',
         lastName: '',
@@ -41,6 +43,7 @@ const Form = () => {
         location: '',
       });
       setFormStatus(true);
+      setIsLoading(false);
       setTimeout(() => {
         setFormStatus(false);
       }, 5000);
@@ -50,7 +53,11 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className='max-w-md mx-auto md:p-0 p-10'>
+    <form
+      onSubmit={handleSubmit}
+      className='max-w-md mx-auto md:p-0 p-10'
+      method='POST'
+    >
       {/* <h2 className='font-extrabold md:text-6xl text-2xl text-secondary text-center '>
         Free Courses
       </h2> */}
@@ -171,13 +178,20 @@ const Form = () => {
         </div>
       </div>
       <button
+        disabled={isLoading}
         type='submit'
         className='text-white gobeze-primary-bg  focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center'
       >
-        Submit
+        {isLoading ? 'Submitting...' : 'Submit'}
       </button>
       {formStatus && (
-        <div className={`mt-4 p-4 rounded-md text-white ${responseData === "User is already registered" ? 'bg-red-500' : 'bg-green-500'}`}>
+        <div
+          className={`mt-4 p-4 rounded-md text-white ${
+            responseData === 'User is already registered'
+              ? 'bg-red-500'
+              : 'bg-green-500'
+          }`}
+        >
           <svg
             xmlns='http://www.w3.org/2000/svg'
             className='h-6 w-6 inline-block mr-2'
