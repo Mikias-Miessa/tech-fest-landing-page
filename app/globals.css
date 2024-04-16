@@ -138,11 +138,11 @@ html {
     /* Remove background image for small screens */
   }
 }
-@font-face {
+/* @font-face {
   font-family: 'Dax';
-  src: url('/fonts/DaxRegular.ttf') format('truetype');
-  /* Add additional formats if necessary */
-}
+  src: url('/fonts/DaxRegular.ttf') format('truetype'); */
+/* Add additional formats if necessary */
+/* } */
 
 body {
   font-family: 'Dax', sans-serif;

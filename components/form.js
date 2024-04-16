@@ -15,7 +15,7 @@ const Form = () => {
     location: '',
   });
   const [formStatus, setFormStatus] = useState(false);
-  const [responseData, setResponseData] = useState('')
+  const [responseData, setResponseData] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,7 +31,7 @@ const Form = () => {
     try {
       const response = await axiosInstance.post(baseUrl, formData);
       console.log(response.data);
-      setResponseData(response.data.message)
+      setResponseData(response.data.message);
       setFormData({
         firstName: '',
         lastName: '',
@@ -177,7 +177,13 @@ const Form = () => {
         Submit
       </button>
       {formStatus && (
-        <div className={`mt-4 p-4 rounded-md text-white ${responseData === "User is already registered" ? 'bg-red-500' : 'bg-green-500'}`}>
+        <div
+          className={`mt-4 p-4 rounded-md text-white ${
+            responseData === 'User is already registered'
+              ? 'bg-red-500'
+              : 'bg-green-500'
+          }`}
+        >
           <svg
             xmlns='http://www.w3.org/2000/svg'
             className='h-6 w-6 inline-block mr-2'
