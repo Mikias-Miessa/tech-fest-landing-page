@@ -15,6 +15,7 @@ const Form = () => {
     location: '',
   });
   const [formStatus, setFormStatus] = useState(false);
+  const [responseData, setResponseData] = useState('')
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,6 +31,7 @@ const Form = () => {
     try {
       const response = await axiosInstance.post(baseUrl, formData);
       console.log(response.data);
+      setResponseData(response.data.message)
       setFormData({
         firstName: '',
         lastName: '',
@@ -39,6 +41,9 @@ const Form = () => {
         location: '',
       });
       setFormStatus(true);
+      setTimeout(() => {
+        setFormStatus(false);
+      }, 5000);
     } catch (error) {
       console.log(error);
     }
@@ -172,7 +177,7 @@ const Form = () => {
         Submit
       </button>
       {formStatus && (
-        <div className='mt-4 p-4 bg-green-500 text-white rounded-md'>
+        <div className={`mt-4 p-4 rounded-md text-white ${responseData === "User is already registered" ? 'bg-red-500' : 'bg-green-500'}`}>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             className='h-6 w-6 inline-block mr-2'
@@ -187,7 +192,7 @@ const Form = () => {
               d='M5 13l4 4L19 7'
             />
           </svg>
-          <p className='inline-block'>Form Sent Successfully!</p>
+          <p className='inline-block'>{responseData}</p>
         </div>
       )}
     </form>
