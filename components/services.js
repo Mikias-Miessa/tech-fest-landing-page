@@ -20,9 +20,9 @@ const faqData = [
       "Ready to turn your big ideas into reality? Our startup acceleration program is your launchpad to success. From brainstorming sessions to pitch practice and everything in between, we've got the tools and support to supercharge your startup journey. Connect with fellow trailblazers, tap into expert advice, and get the resources you need to bring your vision to life. Whether you're brewing the next big app or revolutionizing eco-friendly tech, we're here to help you soar. Get ready to disrupt the status quo and make your mark on the world!",
   },
   {
-    question: 'Free and Paid Courses',
+    question: 'Courses',
     answer:
-      "Dive into a world of learning with our range of free and paid courses designed just for you. Whether you're exploring a new passion or diving deeper into your major, we've got something for everyone. Choose from a variety of topics, from coding and design to entrepreneurship and marketing, and learn at your own pace. Our courses are taught by industry experts, so you know you're getting top-notch education. Plus, with options for both free and paid courses, there's no limit to what you can achieve. So why wait? Start your learning journey today and unlock a world of possibilities!",
+      "Dive into a world of learning with our range of different courses designed just for you. Whether you're exploring a new passion or diving deeper into your major, we've got something for everyone. Choose from a variety of topics, from coding and design to entrepreneurship and marketing, and learn at your own pace. Our courses are taught by industry experts, so you know you're getting top-notch education. Plus there's no limit to what you can achieve. So why wait? Start your learning journey today and unlock a world of possibilities!",
   },
   // Add more FAQ items as needed
 ];
