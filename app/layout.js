@@ -6,8 +6,8 @@ import '@splidejs/react-splide/css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Gobeze Consult-Tech Fest',
-  description: 'Tech Festival ',
+  title: 'Gobeze Consult-Registration',
+  description: 'Course Registration ',
   icons: {
     icon: ['/favicon.ico'],
   },
