@@ -13,42 +13,46 @@ const RunningClasses = () => {
   const runningClasses = [
     {
       course: {
-        courseName: 'Web Development',
-        duration: '12 weeks',
+        courseName: 'Visual Communication with Graphics Design ',
+        duration: '2 Months',
       },
-      start_date: '2024-05-01',
-      instructor: {
-        name: 'John Doe',
-      },
-      students: ['Alice', 'Bob', 'Charlie'],
-      thumbnail: '/images/web.jpg',
-      slug: 'web-development',
-    },
-    {
-      course: {
-        courseName: 'Digital Marketing',
-        duration: '12 weeks',
-      },
-      start_date: '2024-05-01',
-      instructor: {
-        name: 'John Doe',
-      },
-      students: ['Alice', 'Bob', 'Charlie'],
-      thumbnail: '/images/digital.jpg',
-      slug: 'web-development',
-    },
-    {
-      course: {
-        courseName: 'Graphic Design',
-        duration: '8 weeks',
-      },
-      start_date: '2024-04-15',
+      start_date: '2024-04-27',
       instructor: {
         name: 'Jane Smith',
       },
       students: ['David', 'Emma'],
       thumbnail: '/images/graphics.jpg',
-      slug: 'graphic-design',
+      slug: 'https://forms.gle/iVQuAMsCQJHryD66A',
+      price: '3600 birr per month',
+    },
+    {
+      course: {
+        courseName: 'Digital Marketing',
+        duration: '1 Month',
+      },
+      start_date: '2024-04-30',
+      instructor: {
+        name: 'John Doe',
+      },
+      students: ['Alice', 'Bob', 'Charlie'],
+      thumbnail: '/images/digital.jpg',
+      slug: 'https://forms.gle/zG81VAJTB635rVyGA',
+      price: '4000 birr per month',
+    },
+
+    {
+      course: {
+        courseName: 'Full Stack Web Development',
+        duration: '3 Months',
+      },
+      // start_date: '',
+      instructor: {
+        name: 'John Doe',
+      },
+      students: ['Alice', 'Bob', 'Charlie'],
+      thumbnail: '/images/web.jpg',
+      slug: 'https://forms.gle/RYkSMXBbUNSHYnmXA',
+      price: '5000 birr per month',
     },
     // Add more objects as needed
   ];
@@ -127,24 +131,35 @@ const RunningClasses = () => {
                           </h1>
                           <h1 className='font-extralight text-xs italic mt-2'>
                             Starts on{' '}
-                            {course.start_date &&
-                              Moment(course.start_date).format('MMM DD YYYY ')}
+                            {course.start_date
+                              ? Moment(course.start_date).format('MMM DD YYYY ')
+                              : 'TBA'}
                           </h1>
                           <div className='mt-4'>
-                            <span className='font-bold text-sm text-secondary'>
+                            <h1 className='font-bold text-sm text-secondary'>
+                              {' '}
+                              ፕሮጀክቶች ያከተተ ስልጠና
+                            </h1>
+                            <h1 className='font-bold text-sm text-secondary'>
+                              የሥራ ላይ ስልጠና (Internship) የተመቻቸለት
+                            </h1>
+                            <h1 className='font-bold text-sm text-secondary'>
+                              100% በተግባር የተደገፈ ስልጠና
+                            </h1>
+                            {/* <span className='font-bold text-sm text-secondary'>
                               Instructor :{' '}
                             </span>
                             <span className='font-extralight text-sm italic '>
                               {course.instructor
                                 ? course.instructor.name
                                 : 'TBA'}
-                            </span>
+                            </span> */}
                           </div>
                           <div className='flex gap-4 mt-4'>
                             <div className='flex  border-r pr-4 items-center'>
                               {/* <PiStudentFill size={20} color='#105a7E' />{' '} */}
                               <span className='text-xs font-thin ml-2 italic'>
-                                {course.students && course.students.length}
+                                {course.price && course.price}
                               </span>
                             </div>
                             <div className='flex  pr-2 items-center'>
@@ -157,10 +172,11 @@ const RunningClasses = () => {
                           </div>
                           <div className='flex justify-end mt-4 mb-2 pr-2'>
                             <a
-                              href={`/trainings/${course.slug && course.slug}`}
+                              href={course.slug && course.slug}
+                              target='_blank'
                               className='bg-gradient-to-r from-orange-300 via-orange-500 to-orange-500 px-4 py-1 text-white font-normal text-sm rounded hover:scale-105 duration-200 flex items-end'
                             >
-                              Learn More <RiArrowRightDoubleFill size={17} />
+                              Register Now <RiArrowRightDoubleFill size={17} />
                             </a>
                           </div>
                         </div>
